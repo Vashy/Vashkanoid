@@ -41,30 +41,32 @@ public class Ball : MonoBehaviour
         }
         else
         {
-            ContactPoint2D[] contacts = collision.contacts;
-
-            direction = UpdatedDirectionOnGenericCollision(contacts);
+            direction = UpdatedDirectionOnGenericCollision(collision);
         }
     }
 
-    private Vector3 UpdatedDirectionOnGenericCollision(ContactPoint2D[] contacts)
+    private Vector3 UpdatedDirectionOnGenericCollision(Collision2D collision)
     {
+        ContactPoint2D[] contacts = collision.contacts;
         foreach (ContactPoint2D contact in contacts)
         {
             Vector2 normal = contact.normal;
-
             if (IsHorizontalCollision(normal))
             {
-                // Horizontal collision
                 return new Vector3(-direction.x, direction.y).normalized;
             }
-            else
+            else if (IsVerticalCollision(normal))
             {
-                // Vertical collision
                 return new Vector3(direction.x, -direction.y).normalized;
             }
+            return new Vector3(-direction.x, -direction.y).normalized;
         }
         return direction;
+    }
+
+    private static bool IsVerticalCollision(Vector2 normal)
+    {
+        return Mathf.Abs(normal.x) < Mathf.Abs(normal.y);
     }
 
     private static bool IsHorizontalCollision(Vector2 normal)

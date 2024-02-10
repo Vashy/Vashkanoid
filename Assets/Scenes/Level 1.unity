@@ -4306,12 +4306,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5910945937523327131, guid: 45247e137c31f044c8699211bb683ec9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910945937523327131, guid: 45247e137c31f044c8699211bb683ec9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910945937523327131, guid: 45247e137c31f044c8699211bb683ec9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 5910945937523327131, guid: 45247e137c31f044c8699211bb683ec9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.601
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 5910945937523327131, guid: 45247e137c31f044c8699211bb683ec9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4372,7 +4380,7 @@ PrefabInstance:
       objectReference: {fileID: 958732070}
     - target: {fileID: 6111847359427253016, guid: 97777da9c355dce4ba5cd8c5edc54511, type: 3}
       propertyPath: m_Text
-      value: 'LIVES:'
+      value: 'LIVES: 3'
       objectReference: {fileID: 0}
     - target: {fileID: 9218515378739365630, guid: 97777da9c355dce4ba5cd8c5edc54511, type: 3}
       propertyPath: m_Pivot.x
@@ -4509,7 +4517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6383613720175515001, guid: 4556abd80034e4a4d92c673fbe9437e6, type: 3}
       propertyPath: currentLives
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6383613720175515001, guid: 4556abd80034e4a4d92c673fbe9437e6, type: 3}
       propertyPath: gameOverPrompt
@@ -4791,6 +4799,10 @@ PrefabInstance:
     - target: {fileID: 1655543854653289405, guid: 1bf87c3c8fcf48b459200b5dab3d3999, type: 3}
       propertyPath: m_Name
       value: Basic Block (Blue)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655543854653289405, guid: 1bf87c3c8fcf48b459200b5dab3d3999, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
